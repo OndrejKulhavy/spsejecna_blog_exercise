@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple HTML Page</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+<body>
+<div class="min-h-screen bg-white dark:bg-gray-800">
+    <header class="flex justify-between items-center py-6 px-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div>
+            <img
+                src="/placeholder.svg"
+                width="140"
+                height="40"
+                alt="Logo"
+                style="aspect-ratio: 140 / 40; object-fit: cover;"
+            />
+        </div>
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 p-2">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class=" h-6 w-6 text-gray-500 dark:text-gray-400"
+            >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </button>
+    </header>
+    <main class="p-8">
+        {% for post in blog_posts %}
+            <article class="mb-8 space-y-2">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">{{ post[0] }}</h2>
+                <div class="text-gray-500 dark:text-gray-400">Posted on {{ post[2] }} by {{ post[3] }}</div>
+                <p class="text-gray-600 dark:text-gray-300">{{ post[1] }}</p>
+            </article>
+        {% endfor %}
+    </main>
+</div>
+</body>
+</html>
