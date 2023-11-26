@@ -2,6 +2,7 @@
 Homework assignment for the [SPŠE Ječná](https://www.spsejecna.cz/) school.
 The goal of this assignment is to create a simple REST API for a blog application.
 
+You can try it on this [URL](http://64.226.98.3:5000/api) address.
 
 ## Table of Contents
 
